@@ -1,0 +1,37 @@
+.header {
+  height: 80px;
+  width: calc(100vw - 64px);
+  position: fixed;
+  background: #4f27bf;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  color: #fff;
+}
+
+.iconFlex {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 16px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+}
+
+.title {
+  flex-wrap: nowrap;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
