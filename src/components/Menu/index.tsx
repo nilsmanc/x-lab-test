@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import { MenuItem } from '../MenuItem'
 
 import styles from './Menu.module.scss'
 
 const Menu: React.FC = () => {
   const [visible, setVisible] = useState(false)
+
   const visibleHandler = () => {
     setVisible(!visible)
   }
@@ -13,27 +15,27 @@ const Menu: React.FC = () => {
   const items = [
     { path: '/', src: './static/home.PNG', title: 'Главная' },
     { path: '/address', src: './static/lupa.PNG', title: 'Поиск адресов' },
-    { path: '#', src: './static/cube.PNG', title: 'Таблицы' },
-    { path: '#', src: './static/cal.PNG', title: 'Календарь' },
-    { path: '#', src: './static/location.PNG', title: 'Карты' },
-    { path: '#', src: './static/vidget.PNG', title: 'Виджеты' },
+    { path: '', src: './static/cube.PNG', title: 'Таблицы' },
+    { path: '', src: './static/calendar.PNG', title: 'Календарь' },
+    { path: '', src: './static/location.PNG', title: 'Карты' },
+    { path: '', src: './static/vidget.PNG', title: 'Виджеты' },
   ]
 
   const additionalItems = [
-    { path: '#', src: './static/peaple3.PNG', title: 'Настройки профиля' },
-    { path: '#', src: './static/finance.PNG', title: 'Управление финансами' },
+    { path: '', src: './static/peaple3.PNG', title: 'Настройки профиля' },
+    { path: '', src: './static/finance.PNG', title: 'Управление финансами' },
   ]
 
   return (
     <div className={styles.menuWrapper}>
-      <h3 className={styles.mainTitle}>Меню</h3>
+      <h3>Меню</h3>
       {items.map((item) => (
-        <MenuItem path={item.path} src={item.src} title={item.title} />
+        <MenuItem key={item.src} path={item.path} src={item.src} title={item.title} />
       ))}
       <div className={styles.settings} onClick={visibleHandler}>
         <div className={styles.settingWrapper}>
           <div className={styles.icon}>
-            <img className={styles.iconImage} src='./static/sett.PNG' alt='' />
+            <img src='./static/sett.PNG' alt='' />
           </div>
           <div className={styles.title}>
             <a>Настройки</a>
@@ -41,7 +43,7 @@ const Menu: React.FC = () => {
         </div>
         <div>
           <div className={styles.icon}>
-            <img className={styles.iconImage} src='./static/triple.PNG' alt='' />
+            <img src='./static/triple.PNG' alt='' />
           </div>
         </div>
       </div>
@@ -56,12 +58,12 @@ const Menu: React.FC = () => {
       ) : (
         <></>
       )}
-      <Link to='#' className={styles.link}>
+      <Link to='' className={styles.link}>
         <div className={styles.bar}>
           <div className={styles.icon}>
-            <img className={styles.iconImage} src='./static/logout.PNG' alt='' />
+            <img src='./static/logout.PNG' alt='' />
           </div>
-          <div className={styles.itemTitle}>
+          <div className={styles.title}>
             <a>Выход</a>
           </div>
         </div>

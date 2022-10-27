@@ -13,7 +13,7 @@ export const MenuItem: React.FC<MenuItemProps> = ({ path, src, title }) => {
     <Link className={styles.link} to={path}>
       <div className={styles.bar}>
         <div className={styles.icon}>
-          <img className={styles.iconImage} src={src} />
+          <img src={src} />
         </div>
         <div className={styles.title}>
           <a>{title}</a>
