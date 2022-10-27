@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/x-lab-test/static/css/main.d70c5fe7.css",
+    "main.js": "/x-lab-test/static/js/main.8d3da758.js",
+    "index.html": "/x-lab-test/index.html",
+    "main.d70c5fe7.css.map": "/x-lab-test/static/css/main.d70c5fe7.css.map",
+    "main.8d3da758.js.map": "/x-lab-test/static/js/main.8d3da758.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d70c5fe7.css",
+    "static/js/main.8d3da758.js"
+  ]
+}
